@@ -15,49 +15,6 @@ Beyond coding, I enjoy **writing and photography**, always looking for new persp
 
 ---
 
-### Current Work
-
-**Data Science Intern** @ Indian School of Business (Sept '25 - Present)  
-Working with Prof. Aaditya Dar on scalable data pipelines for government asset declarations and fine-tuning LLMs for entity extraction.
-
-**Research**  
-Co-authoring *"Detecting Design Theater in Reasoning Models"* with Northeastern University, developing benchmarks to quantify authenticity gaps in AI reasoning systems.
-
-**Recent Launch**  
-Deployed **De-Tail** - experimental reasoning-transparent search assistant with step-by-step thought chains and real-time web search.
-
----
-
-###  Research
-
-**Detecting Design Theater in Reasoning Models**  
-*Working Paper 2025 | Co-Authors: Kashif Imteyaz, Daniel Lee, Md Kaif Imteyaz, Dr. Saiph Savage*  
-Benchmark for exposing when LLMs generate convincing rationales for unimplemented features.
-
-**PRISM-PT: Personalizing Physical Therapy through Cultural Agentic Intelligence**  
-*Final Project 2025*  
-Agentic system for creating culturally-aligned exercise videos through appropriate demonstrations.
-
----
-
-###  Experience
-
-**Data Science Intern** @ Indian School of Business (Sept '25 - Present)  
-**Research Intern** @ Michigan State University (Mar '25 - Aug '25)  
-**Full Stack Developer Intern** @ FTK Center, JMI (Dec '22 - Jan '23)  
-
----
-
-### Tech Stack
-
-**Languages:** Python, JavaScript, TypeScript, Java  
-**AI/ML Frameworks:** TensorFlow, PyTorch, Scikit-learn  
-**Web Technologies:** React.js, Node.js, Express.js, Next.js, Tailwind CSS  
-**Databases:** MySQL, MongoDB, PostgreSQL  
-**Developer Tools:** Git, Docker, Figma, Postman, IBM Watson Studio, Vercel, Render  
-**LLM Engineering:** Fine-Tuning, LoRA/QLoRA, LangChain, Retrieval-Augmented Generation, Prompt Engineering, Model Quantization, Evaluation & Benchmarking
-
----
 
 ###  Let's Connect
 
@@ -69,12 +26,6 @@ Agentic system for creating culturally-aligned exercise videos through appropria
 ---
 
 ###  GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kaif-Imteyaz&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" width="48%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Kaif-Imteyaz&theme=dark&hide_border=true" alt="GitHub Streak" width="48%"/>
-</p>
-
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Kaif-Imteyaz&theme=react-dark&hide_border=true&area=true" alt="Activity Graph" width="90%"/>
 </p>
