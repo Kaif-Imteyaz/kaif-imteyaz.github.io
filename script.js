@@ -5,10 +5,6 @@ const updates = [
   },
   {
     date: "Oct '25",
-    text: "Working on a paper on Detecting Design Theater (false reasoning) in Large Reasoning Models with collaborators from SalesforceAI and Northeastern University, developing benchmarks to quantify authenticity gaps in AI reasoning models.",
-  },
-  {
-    date: "Oct '25",
     text: `Working on a paper on Detecting Design Theater (false reasoning) in Large Reasoning Models with collaborators from <a href="https://www.salesforceairesearch.com/" target="_blank" rel="noopener noreferrer" class="text-link">Salesforce AI Research</a> and <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer" class="text-link">Northeastern University</a>, developing benchmarks to quantify authenticity gaps in AI reasoning models.`,
   },
   {
