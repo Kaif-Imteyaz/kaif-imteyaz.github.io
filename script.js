@@ -1,28 +1,36 @@
 const updates = [
   {
-    date: "Oct '25",
-    text: "Co-authoring Detecting Design Theater in Reasoning Models with collaborators from Northeastern University, developing benchmarks to quantify authenticity gaps in AI reasoning systems.",
+    date: "Nov '25",
+    text: " Working on CATS(Culturally Adaptive Therapeutic System), an agentic system for physiotherapists to create personalized exercise videos that align with patients' cultural backgrounds, showing exercises through culturally-appropriate demonstrations.",
   },
   {
     date: "Oct '25",
-    text: "Deployed De-Tail, an experimental reasoning-transparent search assistant using Deepseek reasoner, featuring step-by-step thought chains and real-time web search integration with Tavily API.",
+    text: "Working on a paper on Detecting Design Theater (false reasoning) in Large Reasoning Models with collaborators from SalesforceAI and Northeastern University, developing benchmarks to quantify authenticity gaps in AI reasoning models.",
+  },
+  {
+    date: "Oct '25",
+    text: `Working on a paper on Detecting Design Theater (false reasoning) in Large Reasoning Models with collaborators from <a href="https://www.salesforceairesearch.com/" target="_blank" rel="noopener noreferrer" class="text-link">Salesforce AI Research</a> and <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer" class="text-link">Northeastern University</a>, developing benchmarks to quantify authenticity gaps in AI reasoning models.`,
+  },
+  {
+    date: "Oct '25",
+    text: "Deployed De-Tail, an experimental reasoning-transparent search assistant tool using OpenAI reasoner, featuring step-by-step thought chains and real-time web search integration with Tavily API",
   },
   {
     date: "Sept '25",
-    text: "Started Data Science Internship at Indian School of Business (with Prof. Aaditya Dar).",
+    text: "Started Data Science Internship with Prof. Aaditya Dar, economist at Amazon.",
   },
   {
     date: "Sept '25",
-    text: "Working on Blue, an AI driven LLVM obfuscation tool for Smart India Hackathon 2025. It uses AI to decide how much protection each function needs, balancing performance and security.",
+    text: "Building Blue, an AI-based LLVM tool that adds the right level of code obfuscation (hiding logic, encrypting sensitive code, anti-debugging) to each function, balancing security and performance.",
   },
-  
+
   {
     date: "Sep '25",
-    text: "Submitted poster to India HCI 2025 on co-designing WhatsApp-based government performance dashboards using the Rose-Bud-Thorn reflection framework.",
+    text: "Submitted poster to India HCI 2025 on co-designing WhatsApp-based government performance dashboards with public sector workers.",
   },
   {
     date: "Aug '25",
-    text: " Completed research internship at Michigan State University with Prof. Prabhat Barnwal, built and deployed Sewa Assist and Peer Knowledge Exchange Platform for government officers in Punjab.",
+    text: " Completed research internship at Michigan State University with Prof. Prabhat Barnwal, built and deployed Sewa Assist and Peer Knowledge Exchange Platform.",
   },
   {
     date: "Jul '25",
@@ -38,7 +46,7 @@ const updates = [
   },
   {
     date: "Mar '25",
-    text: "Started Research Internship at Michigan State University (with Prof. Prabhat Barnwal), working on building tools to improve government service delivery in Punjab, India.",
+    text: "Started Full Stack Developer and Research Internship at Michigan State University (with Prof. Prabhat Barnwal).",
   },
   {
     date: "Jul '24",
@@ -68,8 +76,7 @@ const updates = [
     date: "Dec '22",
     text: "Collaborated in Agile 4-member team at FTK Center to ship 3 major features in 6 weeks using React, Node.js, and MySQL.",
   },
-  
-]
+];
 
 const researchData = [
   {
@@ -82,17 +89,39 @@ const researchData = [
     alt: "Detecting Design Theater research",
   },
   {
-    title: "PRISM-PT: Personalizing Physical Therapy through Cultural Agentic Intelligence",
+    title: "CATS: Culturally Adaptive Therapeutic System",
     authors: "Md Kaif Imteyaz",
     status: "Final Project 2025",
     description:
       "An agentic system for physiotherapists to create personalized exercise videos that align with patients' cultural backgrounds, showing exercises through culturally-appropriate demonstrations.",
     image: "public/prism.png",
-    alt: "PRISM-PT research project",
+    alt: "CATS research project",
   },
-]
+];
 
 const projectsData = [
+  {
+    title: "CATS: Culturally Adaptive Therapeutic System",
+    tech: "MediaPipe BlazePose, AI Voice, On-Device Processing",
+    year: "2025",
+    description:
+      "Built a privacy-first physiotherapy platform offering real-time AI posture analysis, automated exercise monitoring, and intelligent voice coaching, with all processing done locally.",
+    image: "public/cats-ui.png",
+    alt: "CATS physiotherapy system",
+    link: "https://github.com/Kaif-Imteyaz/CATS", // replace if you have repo
+    linkText: "Repository",
+  },
+  {
+    title: "OceanDataSync",
+    tech: "Python, NOAA APIs, Copernicus Marine, Argo, NCEI",
+    year: "2025",
+    description:
+      "Built an automated oceanographic data pipeline that synchronizes datasets from multiple authoritative sources into a unified, standardized format. Includes chunked processing, YAML-based configuration, robust retry logic, and detailed logging in CSV, JSON, and text outputs.",
+    image: "public/oceandatasync.jpg",
+    alt: "OceanDataSync pipeline",
+    link: "https://github.com/Kaif-Imteyaz/OceanDataSync",
+    linkText: "Repository",
+  },
   {
     title: "De-Tail: Agentic AI Search Assistant",
     tech: "React, DeepSeek API, Tavily API",
@@ -126,60 +155,60 @@ const projectsData = [
     link: "https://www.youtube.com/watch?v=Vt5HbBhyJlA",
     linkText: "Demo Video",
   },
-]
+];
 
 const heroContent = {
   name: "Md Kaif Imteyaz",
   greeting: "Hey, I'm Kaif.",
   profileImage: "public/xyz.jpg",
-}
+};
 
-let expandedUpdates = false
+let expandedUpdates = false;
 
 // DOM Elements
-const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
-const mobileNavOverlay = document.getElementById("mobileNavOverlay")
-const mobileNavDrawer = document.querySelector(".mobile-nav-drawer")
-const closeBtn = document.querySelector(".close-btn")
-const mobileNavLinks = document.querySelectorAll(".mobile-nav-link")
-const scrollTopBtn = document.getElementById("scrollTopBtn")
-const updatesList = document.getElementById("updatesList")
-const toggleUpdatesBtn = document.getElementById("toggleUpdatesBtn")
-const researchList = document.getElementById("researchList")
-const projectsList = document.getElementById("projectsList")
-const footerText = document.getElementById("footerText")
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const mobileNavOverlay = document.getElementById("mobileNavOverlay");
+const mobileNavDrawer = document.querySelector(".mobile-nav-drawer");
+const closeBtn = document.querySelector(".close-btn");
+const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+const updatesList = document.getElementById("updatesList");
+const toggleUpdatesBtn = document.getElementById("toggleUpdatesBtn");
+const researchList = document.getElementById("researchList");
+const projectsList = document.getElementById("projectsList");
+const footerText = document.getElementById("footerText");
 
 // Initialize
 document.addEventListener("DOMContentLoaded", () => {
-  renderUpdates()
-  renderResearch()
-  renderProjects()
-  updateFooter()
-  setupScrollListener()
-  setupMobileNav()
-})
+  renderUpdates();
+  renderResearch();
+  renderProjects();
+  updateFooter();
+  setupScrollListener();
+  setupMobileNav();
+});
 
 // Mobile Navigation
 function setupMobileNav() {
   mobileMenuBtn.addEventListener("click", () => {
-    mobileNavOverlay.classList.add("active")
-  })
+    mobileNavOverlay.classList.add("active");
+  });
 
-  closeBtn.addEventListener("click", closeMobileNav)
+  closeBtn.addEventListener("click", closeMobileNav);
 
   mobileNavOverlay.addEventListener("click", (e) => {
     if (e.target === mobileNavOverlay) {
-      closeMobileNav()
+      closeMobileNav();
     }
-  })
+  });
 
   mobileNavLinks.forEach((link) => {
-    link.addEventListener("click", closeMobileNav)
-  })
+    link.addEventListener("click", closeMobileNav);
+  });
 }
 
 function closeMobileNav() {
-  mobileNavOverlay.classList.remove("active")
+  mobileNavOverlay.classList.remove("active");
 }
 // Updates Section
 function renderUpdates() {
@@ -193,7 +222,7 @@ function renderUpdates() {
         <span class="update-date">[${update.date}]</span>
         ${update.text}
       </div>
-    `,
+    `
     )
     .join("");
 
@@ -215,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateFooter();
   setupScrollListener();
   setupMobileNav();
-  
+
   // Add the toggle button event listener here
   toggleUpdatesBtn.addEventListener("click", () => {
     expandedUpdates = !expandedUpdates;
@@ -239,9 +268,9 @@ function renderResearch() {
           <p class="research-description">${research.description}</p>
         </div>
       </div>
-    `,
+    `
     )
-    .join("")
+    .join("");
 }
 
 // Projects Section
@@ -260,28 +289,28 @@ function renderProjects() {
           <p class="project-description">${project.description}</p>
         </div>
       </div>
-    `,
+    `
     )
-    .join("")
+    .join("");
 }
 
 // Footer
 function updateFooter() {
-  const year = new Date().getFullYear()
-  footerText.textContent = `${year} | ${heroContent.name}`
+  const year = new Date().getFullYear();
+  footerText.textContent = `${year} | ${heroContent.name}`;
 }
 
 // Scroll to Top
 function setupScrollListener() {
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) {
-      scrollTopBtn.classList.add("visible")
+      scrollTopBtn.classList.add("visible");
     } else {
-      scrollTopBtn.classList.remove("visible")
+      scrollTopBtn.classList.remove("visible");
     }
-  })
+  });
 
   scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  })
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
