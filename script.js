@@ -1,5 +1,13 @@
 const updates = [
   {
+    date: "Jan '26",
+    text: "Developing Ink2Info, a health informatics solution designed to digitize handwritten prescriptions into structured Electronic Health Records (EHRs), bridging the critical gap between traditional paper-based clinical workflows and modern digital health infrastructure.",
+  },
+  {
+    date: "Jan '26",
+    text: "Attended <a href='https://aiims.edu/index.php/en' target='_blank' rel='noopener noreferrer' class='text-link'>AIIMS</a>-<a href='https://www.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>IIT Delhi</a>-<a href='https://www.ucl.ac.uk/' target='_blank' rel='noopener noreferrer' class='text-link'>UCL</a> Med-Tech Summit and Hackathon 2026, collaborated with interdisciplinary teams to develop innovative healthcare solutions using AI and emerging technologies.",
+  },
+  {
     date: "Nov '25",
     text: " Working on CATS(Culturally Adaptive Therapeutic System), an agentic system for physiotherapists to create personalized exercise videos that align with patients' cultural backgrounds, showing exercises through culturally-appropriate demonstrations.",
   },
@@ -75,6 +83,16 @@ const updates = [
 ];
 
 const researchData = [
+  
+  {
+    title: "CATS: Culturally Adaptive Therapeutic System",
+    authors: "Md Kaif Imteyaz",
+    status: "Final Undergraduate Project 2025",
+    description:
+      "An agentic system for physiotherapists to create personalized exercise videos that align with patients' cultural backgrounds, showing exercises through culturally-appropriate demonstrations.",
+    image: "public/prism.png",
+    alt: "CATS research project",
+  },
   {
     title: "Detecting Design Theater in Reasoning Models",
     authors: "Kashif Imteyaz, Daniel Lee, Md Kaif Imteyaz, Saiph Savage",
@@ -84,32 +102,34 @@ const researchData = [
     image: "public/ui-bench.png",
     alt: "Detecting Design Theater research",
   },
-  {
-    title: "CATS: Culturally Adaptive Therapeutic System",
-    authors: "Md Kaif Imteyaz",
-    status: "Final Project 2025",
-    description:
-      "An agentic system for physiotherapists to create personalized exercise videos that align with patients' cultural backgrounds, showing exercises through culturally-appropriate demonstrations.",
-    image: "public/prism.png",
-    alt: "CATS research project",
-  },
 ];
 
 const projectsData = [
   {
+    title: "Ink2Info: Digitizing Health Informatics",
+    tech: "Intelligent Document Processing (IDP), Clinical Data Standardization, Computer Vision",
+    year: "2026",
+    description:
+      "Developing a health informatics solution that digitizes handwritten prescriptions into structured Electronic Health Records (EHRs), bridging the critical gap between traditional paper-based clinical workflows and modern digital health infrastructure.",
+    image: "public/ink2info.png",
+    alt: "Ink2Info prescription digitizer",
+    link: "https://github.com/Kaif-Imteyaz/Ink2Info",
+    linkText: "Repository",
+  },
+  {
     title: "CATS: Culturally Adaptive Therapeutic System",
-    tech: "MediaPipe BlazePose, AI Voice, On-Device Processing",
+    tech: "Computer Vision (Pose Estimation), Edge AI (On-Device ML), Privacy-First Design",
     year: "2025",
     description:
       "Built a privacy-first physiotherapy platform offering real-time AI posture analysis, automated exercise monitoring, and intelligent voice coaching, with all processing done locally.",
     image: "public/cats-ui.png",
     alt: "CATS physiotherapy system",
-    link: "https://github.com/Kaif-Imteyaz/CATS", // replace if you have repo
+    link: "https://github.com/Kaif-Imteyaz/CATS",
     linkText: "Repository",
   },
   {
     title: "OceanDataSync",
-    tech: "Python, NOAA APIs, Copernicus Marine, Argo, NCEI",
+    tech: "Automated ETL Pipelines, Geospatial Data Processing, Asynchronous Architecture",
     year: "2025",
     description:
       "Built an automated oceanographic data pipeline that synchronizes datasets from multiple authoritative sources into a unified, standardized format. Includes chunked processing, YAML-based configuration, robust retry logic, and detailed logging in CSV, JSON, and text outputs.",
@@ -120,10 +140,10 @@ const projectsData = [
   },
   {
     title: "De-Tail: Agentic AI Search Assistant",
-    tech: "React, DeepSeek API, Tavily API",
+    tech: "LLMs, RAG, Chain-of-Thought Reasoning, Agentic Workflows",
     year: "2025",
     description:
-      "Developed experimental chatbot revealing the reasoning process and step-by-step thought chain for transparency. Integrated DeepSeek Reasoner with Tavily API for real-time web search and retrieval-augmented generation.",
+      "Developed experimental chatbot revealing the reasoning process and step-by-step thought chain for transparency. Integrated OpenAI Reasoner with Tavily API for real-time web search and retrieval-augmented generation.",
     image: "public/detail-ui.png",
     alt: "De-Tail project",
     link: "https://github.com/Kaif-Imteyaz/De-Tail",
@@ -131,7 +151,7 @@ const projectsData = [
   },
   {
     title: "Anti-Corrupt Infrastructure",
-    tech: "React, Node.js, OpenRouter (OpenAI)",
+    tech: "Full-Stack System Design, GovTech Architecture, AI-Driven Auditing",
     year: "2025",
     description:
       "Developed AI-based platform to ensure transparency in infrastructure projects and prevent corruption. Automated systems for project tracking, fund allocation, and milestone verification.",
@@ -142,7 +162,7 @@ const projectsData = [
   },
   {
     title: "Vulture: Vulnerability Scanner",
-    tech: "React, Node.js, OWASP ZAP API",
+    tech: "Automated Security Testing (DAST), Vulnerability Scanning",
     year: "2023",
     description:
       "Built web app identifying vulnerabilities using OWASP ZAP API during 2-day hackathon. Ranked among top 10 projects among 100+ submissions.",
@@ -281,7 +301,7 @@ function renderProjects() {
         <div class="project-content">
           <h3 class="project-title">${project.title}</h3>
           <p class="project-meta">${project.tech} | ${project.year}</p>
-          <a href="${project.link}" class="project-link">${project.linkText}</a>
+          <a href="${project.link}" target="_blank"  rel="noopener noreferrer" class="project-link">${project.linkText}</a>
           <p class="project-description">${project.description}</p>
         </div>
       </div>

@@ -613,10 +613,21 @@ body.dark-mode .project-title {
 }
 
 .project-meta {
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.15rem;
 }
 
+.more-projects{
+  margin-top: 1rem;
+  font-size: small;
+  color: var(--text-secondary);
+}
+
+.more-projects a{
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
 body.dark-mode .project-meta {
   color: var(--dark-text-secondary);
 }
