@@ -1,6 +1,6 @@
 <h1 align="center">Md Kaif Imteyaz</h1>
 <p align="center">
-  B.Tech CSE @ Jamia Hamdard · AI Researcher · Building Transparent AI Systems
+  B.Tech CSE @ Jamia Hamdard 
 </p>
 
 ---
