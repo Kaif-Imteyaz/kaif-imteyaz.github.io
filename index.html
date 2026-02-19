@@ -44,7 +44,11 @@
             <nav class="nav-desktop">
               <a href="#research" class="nav-link">Research</a>
               <a href="#projects" class="nav-link">Projects</a>
-              <a href="resume.pdf" target="_blank" class="social-link" title="Last Updated: 07 Feb 2026"
+              <a
+                href="resume.pdf"
+                target="_blank"
+                class="social-link"
+                title="Last Updated: 07 Feb 2026"
                 >Resume</a
               >
             </nav>
@@ -63,14 +67,37 @@
             </button>
             <a href="#research" class="mobile-nav-link">Research</a>
             <a href="#projects" class="mobile-nav-link">Projects</a>
-            <a href="resume.pdf" target="_blank" class="mobile-nav-link" title="Last Updated: 07 Feb 2026">Resume</a>
-           
+            <a
+              href="resume.pdf"
+              target="_blank"
+              class="mobile-nav-link"
+              title="Last Updated: 07 Feb 2026"
+              >Resume</a
+            >
           </nav>
         </div>
       </header>
 
       <!-- Update Notification Popup -->
-      <div id="updatePopup" style="position: fixed; top:70px; right: 45px; background: #424141; color: #ffffff; padding: 10px 24px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; font-size: 14px; opacity: 0; transition: opacity 0.3s ease;"><i>Last Updated: 07 Feb 2026</i></div>
+      <div
+        id="updatePopup"
+        style="
+          position: fixed;
+          top: 70px;
+          right: 45px;
+          background: #424141;
+          color: #ffffff;
+          padding: 10px 24px;
+          border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          z-index: 1000;
+          font-size: 14px;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        "
+      >
+        <i>Last Updated: 17 Feb 2026</i>
+      </div>
 
       <!-- Hero Section -->
       <section class="hero">
@@ -79,29 +106,24 @@
             <h2 class="hero-title">Hey, I'm Kaif.</h2>
 
             <p class="hero-description">
-              I'm a Computer Science student at
+              I'm a final-year Computer Science student at
               <a
                 href="https://www.jamiahamdard.ac.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-link"
                 >Jamia Hamdard</a
-              >, passionate about building secure and interpretable AI. I am
-              currently a research intern working with
-              <a
-                href="https://aadityadar.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-link"
-                >Prof Aaditya Dar</a
-              >
-              on “CivicBot”.
+              >, passionate about building human-centered AI systems.
+
               <br />
-              My work focuses on creating tools that make generative AI more
-              transparent and accessible, especially for the public good. I have
-              hands-on experience in full-stack web development and applied
-              machine learning, and I'm currently exploring human-centered AI
-              and agentic systems. <br />
+              My work focuses on applied machine learning and large language
+              models, including fine-tuning, evaluation, and building real-world
+              AI systems that make generative AI more accessible and useful for
+              public-facing applications. I have hands-on experience across LLM
+              development, data pipelines, and full-stack web development, and
+              I'm currently exploring human-centered AI and agentic systems.
+              <br />
+
               Beyond coding, I enjoy writing and photography, always looking for
               new perspectives and ideas. I also enjoy prototyping experimental
               interfaces that reimagine human-computer interaction.<br />
@@ -171,7 +193,6 @@
         </p> -->
       </section>
 
-      
       <!-- Footer -->
       <footer class="footer">
         <p class="footer-text" id="footerText"></p>
@@ -199,16 +220,15 @@
     <script src="script.js"></script>
     <script>
       // Show update notification on page load
-      window.addEventListener('load', function() {
-        const popup = document.getElementById('updatePopup');
-        popup.style.opacity = '1';
-        
+      window.addEventListener("load", function () {
+        const popup = document.getElementById("updatePopup");
+        popup.style.opacity = "1";
+
         // Hide after 10 seconds
-        setTimeout(function() {
-          popup.style.opacity = '0';
+        setTimeout(function () {
+          popup.style.opacity = "0";
         }, 5000);
       });
     </script>
   </body>
 </html>
-

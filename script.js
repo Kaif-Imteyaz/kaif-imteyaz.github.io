@@ -1,5 +1,10 @@
 const updates = [
   {
+  date: "Feb '26",
+  text: "Led a team to 2<sup>nd</sup> place at the AMD AI Reinforcement Learning Hackathon, leading LLM fine-tuning and optimization under strict latency constraints. The event was organized by <a href='https://www.amd.com/' target='_blank' rel='noopener noreferrer' class='text-link'>AMD</a>, <a href='https://scai.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>Yardi School of AI</a> at <a href='https://www.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>IIT Delhi</a>, and <a href='https://unsloth.ai/' target='_blank' rel='noopener noreferrer' class='text-link'>Unsloth AI</a>."
+},
+
+  {
     date: "Jan '26",
     text: "Developing Ink2Info, a health informatics solution designed to digitize handwritten prescriptions into structured Electronic Health Records (EHRs), bridging the critical gap between traditional paper-based clinical workflows and modern digital health infrastructure.",
   },
@@ -83,7 +88,6 @@ const updates = [
 ];
 
 const researchData = [
-  
   {
     title: "CATS: Culturally Adaptive Therapeutic System",
     authors: "Md Kaif Imteyaz",
@@ -238,7 +242,7 @@ function renderUpdates() {
         <span class="update-date">[${update.date}]</span>
         ${update.text}
       </div>
-    `
+    `,
     )
     .join("");
 
@@ -284,7 +288,7 @@ function renderResearch() {
           <p class="research-description">${research.description}</p>
         </div>
       </div>
-    `
+    `,
     )
     .join("");
 }
@@ -305,7 +309,7 @@ function renderProjects() {
           <p class="project-description">${project.description}</p>
         </div>
       </div>
-    `
+    `,
     )
     .join("");
 }
