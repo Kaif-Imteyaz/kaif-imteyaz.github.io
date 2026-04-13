@@ -1,8 +1,12 @@
 const updates = [
   {
-  date: "Feb '26",
-  text: "Led a team to 2<sup>nd</sup> place at the AMD AI Reinforcement Learning Hackathon, leading LLM fine-tuning and optimization under strict latency constraints. The event was organized by <a href='https://www.amd.com/' target='_blank' rel='noopener noreferrer' class='text-link'>AMD</a>, <a href='https://scai.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>Yardi School of AI</a> at <a href='https://www.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>IIT Delhi</a>, and <a href='https://unsloth.ai/' target='_blank' rel='noopener noreferrer' class='text-link'>Unsloth AI</a>."
-},
+    date: "Apr '26",
+    text: "Ranked 7<sup>th</sup> out of 2,000+ participants across a two-phase competition at AISEHack 2026, organized by <a href='https://www.anrf.in/' target='_blank' rel='noopener noreferrer' class='text-link'>ANRF</a> in collaboration with <a href='https://www.ibm.com/' target='_blank' rel='noopener noreferrer' class='text-link'>IBM</a> and <a href='https://www.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>IIT Delhi</a>, hosted at <a href='https://www.iiit.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>IIIT Hyderabad</a>.",
+  },
+  {
+    date: "Feb '26",
+    text: "Led a team to 2<sup>nd</sup> place at the AMD AI Reinforcement Learning Hackathon, leading LLM fine-tuning and optimization under strict latency constraints. The event was organized by <a href='https://www.amd.com/' target='_blank' rel='noopener noreferrer' class='text-link'>AMD</a>, <a href='https://scai.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>Yardi School of AI</a> at <a href='https://www.iitd.ac.in/' target='_blank' rel='noopener noreferrer' class='text-link'>IIT Delhi</a>, and <a href='https://unsloth.ai/' target='_blank' rel='noopener noreferrer' class='text-link'>Unsloth AI</a>.",
+  },
 
   {
     date: "Jan '26",
@@ -317,7 +321,8 @@ function renderProjects() {
 // Footer
 function updateFooter() {
   const year = new Date().getFullYear();
-  footerText.textContent = `${year} | ${heroContent.name}`;
+  // footerText.textContent = `${year} | © ${heroContent.name}`;
+  footerText.textContent = `© ${year} ${heroContent.name}`;
 }
 
 // Scroll to Top
