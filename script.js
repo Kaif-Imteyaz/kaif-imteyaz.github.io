@@ -22,10 +22,6 @@ const updates = [
   },
   {
     date: "Oct '25",
-    text: `Working on a paper on Detecting Design Theater (false reasoning) in Large Reasoning Models with collaborators from <a href="https://www.salesforceairesearch.com/" target="_blank" rel="noopener noreferrer" class="text-link">Salesforce AI Research</a> and <a href="https://www.northeastern.edu/" target="_blank" rel="noopener noreferrer" class="text-link">Northeastern University</a>, developing benchmarks to quantify authenticity gaps in AI reasoning models.`,
-  },
-  {
-    date: "Oct '25",
     text: "Deployed De-Tail, an experimental reasoning-transparent search assistant tool using OpenAI reasoner, featuring step-by-step thought chains and real-time web search integration with Tavily API",
   },
   {
@@ -100,15 +96,6 @@ const researchData = [
       "An agentic system for physiotherapists to create personalized exercise videos that align with patients' cultural backgrounds, showing exercises through culturally-appropriate demonstrations.",
     image: "public/prism.png",
     alt: "CATS research project",
-  },
-  {
-    title: "Detecting Design Theater in Reasoning Models",
-    authors: "Kashif Imteyaz, Daniel Lee, Md Kaif Imteyaz, Saiph Savage",
-    status: "Working Paper 2025",
-    description:
-      "A benchmark for exposing when LLMs generate convincing rationales for unimplemented features, quantifying the authenticity gap in creative reasoning tasks.",
-    image: "public/ui-bench.png",
-    alt: "Detecting Design Theater research",
   },
 ];
 
