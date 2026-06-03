@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Computer Science student at Jamia Hamdard building secure, interpretable AI systems. Specializing in generative AI transparency, human-centered AI, and agentic systems."
+      content="Md Kaif Imteyaz - CS graduate from Jamia Hamdard with research experience in LLMs, spatiotemporal deep learning, and AI systems. Worked with Michigan State University and an Amazon economist."
     />
     <meta
       name="keywords"
-      content="Kaif Imteyaz, AI Research, Machine Learning, Generative AI, Interpretable AI, Human-Centered AI, Full-Stack Developer, Jamia Hamdard"
+      content="Kaif Imteyaz, AI Research, Large Language Models, LLMs, Machine Learning, Deep Learning, Spatiotemporal Forecasting, Multimodal AI, Healthcare AI, RLHF, Fine-Tuning, Generative AI, Full-Stack Developer, Jamia Hamdard"
     />
     <meta
       property="og:title"
-      content="Kaif Imteyaz — AI Research & Full-Stack Development"
+      content="Md Kaif Imteyaz — AI Research & Machine Learning"
     />
     <meta
       property="og:description"
-      content="Exploring the intersection of AI reasoning, interpretability, and scalable web systems."
+      content="CS student researching LLMs, spatiotemporal forecasting, and multimodal AI. Building real-world AI systems with hands-on experience in fine-tuning, evaluation, and scalable pipelines."
     />
     <title>Md Kaif Imteyaz</title>
     <!-- Add Google Fonts for professional typography -->
@@ -44,13 +44,13 @@
             <nav class="nav-desktop">
               <a href="#research" class="nav-link">Research</a>
               <a href="#projects" class="nav-link">Projects</a>
-              <!-- <a
-                href="resume.pdf"
+              <a
+                href="MD_KAIF_IMTEYAZ_RESUME.pdf"
                 target="_blank"
-                class="social-link"
-                title="Last Updated: 13 April 2026"
+                class="nav-link"
+                title="Last Updated: June 1, 2026"
                 >Resume</a
-              > -->
+              >
             </nav>
             <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" aria-label="Open navigation menu">
@@ -67,13 +67,13 @@
             </button>
             <a href="#research" class="mobile-nav-link">Research</a>
             <a href="#projects" class="mobile-nav-link">Projects</a>
-            <!-- <a
-              href="resume.pdf"
+            <a
+              href="MD_KAIF_IMTEYAZ_RESUME.pdf"
               target="_blank"
               class="mobile-nav-link"
-              title="Last Updated: 13 April 2026"
+              title="Last Updated: June 1, 2026"
               >Resume</a
-            > -->
+            >
           </nav>
         </div>
       </header>
@@ -96,7 +96,7 @@
           transition: opacity 0.3s ease;
         "
       >
-        <i>Last Updated: 13 April 2026</i>
+        <i>Last Updated: June 1, 2026</i>
       </div>
 
       <!-- Hero Section -->
@@ -106,7 +106,7 @@
             <h2 class="hero-title">Hey, I'm Kaif.</h2>
 
             <p class="hero-description">
-              I'm a final-year Computer Science student at
+              I'm a Computer Science graduate from
               <a
                 href="https://www.jamiahamdard.ac.in/"
                 target="_blank"
@@ -117,21 +117,20 @@
 
               <br />
               My work focuses on applied machine learning and large language
-              models, including fine-tuning, evaluation, and building real-world
-              AI systems that make generative AI more accessible and useful for
-              public-facing applications. I have hands-on experience across LLM
-              development, data pipelines, and full-stack web development, and
-              I'm currently exploring human-centered AI and agentic systems.
+              models, including model evaluation, benchmarking, retrieval
+              systems, and building real-world AI applications that make
+              generative AI more accessible and useful. I have hands-on
+              experience in machine learning, data pipelines, and full-stack
+              web development, with ongoing research in reasoning model
+              benchmarking and spatiotemporal forecasting.
               <br />
 
-              Beyond coding, I enjoy writing and photography, always looking for
+             Beyond coding, I enjoy writing and photography, always looking for
               new perspectives and ideas. I also enjoy prototyping experimental
               interfaces that reimagine human-computer interaction.<br />
               I'm always happy to connect and collaborate on projects that use
-              AI to make a real impact. Feel free to reach out at
-              <a href="mailto:kaifimteyaz.k@gmail.com" class="text-link"
-                >kaifimteyaz.k@gmail.com</a
-              >.
+              AI to create meaningful real-world impact. Feel free to reach out at
+              <a id="contactEmail" class="text-link"></a>.
             </p>
 
             <div class="social-links">
@@ -152,6 +151,13 @@
                 target="_blank"
                 class="social-link"
                 >Medium</a
+              >
+              <a
+                href="https://scholar.google.com/citations?user=kaifimteyaz"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                >Scholar</a
               >
             </div>
           </div>
@@ -176,6 +182,7 @@
       <!-- Research Section -->
       <section id="research" class="section">
         <h2 class="section-title">Research</h2>
+        <p class="research-areas"><span class="research-areas-label">Research Interests</span> Healthcare AI &middot; LLMs &middot; Multimodal AI &middot; Video AI &middot; RLHF &middot; Continual Learning &middot; AI for Social Impact &middot; Deep Learning</p>
         <div class="research-list" id="researchList"></div>
       </section>
 
@@ -183,14 +190,7 @@
       <section id="projects" class="section">
         <h2 class="section-title">Projects</h2>
         <div class="projects-list" id="projectsList"></div>
-        <!-- <p class="text-center more-projects">
-          More projects on
-          <a
-            href="https://github.com/Kaif-Imteyaz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >GitHub</a>
-        </p> -->
+        <button class="toggle-btn" id="toggleProjectsBtn">See more</button>
       </section>
 
       <!-- Footer -->
@@ -217,7 +217,7 @@
       </button>
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
     <script>
       // Show update notification on page load
       window.addEventListener("load", function () {

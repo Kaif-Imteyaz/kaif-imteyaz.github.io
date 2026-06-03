@@ -89,13 +89,22 @@ const updates = [
 
 const researchData = [
   {
-    title: "CATS: Culturally Adaptive Therapeutic System",
+    title: "Detecting Design Theater in Reasoning Models",
     authors: "Md Kaif Imteyaz",
-    status: "Final Undergraduate Project 2025",
+    status: "LLM Benchmarking",
     description:
-      "An agentic system for physiotherapists to create personalized exercise videos that align with patients' cultural backgrounds, showing exercises through culturally-appropriate demonstrations.",
-    image: "public/prism.png",
-    alt: "CATS research project",
+      "Developing a benchmark to measure authenticity gaps between generated reasoning traces and actual model behavior through systematic evaluation and interpretability analysis.",
+    image: "public/design.png",
+    alt: "Design Theater LLM benchmarking research",
+  },
+  {
+    title: "Episode-Aware PM2.5 Forecasting Across India",
+    authors: "Md Kaif Imteyaz",
+    status: "Spatiotemporal Deep Learning",
+    description:
+      "Designing a spatiotemporal deep learning model for country-level PM2.5 forecasting over a 140×124 grid at 25 km resolution, predicting 16 future hours from a 10-hour lookback across 26 input channels with no future meteorological context.",
+    image: "public/spato-temp.png",
+    alt: "PM2.5 spatiotemporal forecasting heatmap across India",
   },
 ];
 
@@ -105,7 +114,7 @@ const projectsData = [
     tech: "Intelligent Document Processing (IDP), Clinical Data Standardization, Computer Vision",
     year: "2026",
     description:
-      "Developing a health informatics solution that digitizes handwritten prescriptions into structured Electronic Health Records (EHRs), bridging the critical gap between traditional paper-based clinical workflows and modern digital health infrastructure.",
+      "Developed a prescription digitization pipeline using OpenAI and Gemma 7B with a Fabric.js canvas for real-time handwriting extraction, directly modifying inference behavior of the underlying models for domain adaptation. Implemented role-based access control with HMAC-signed QR codes for secure data sharing across multiple user roles.",
     image: "public/ink2info.png",
     alt: "Ink2Info prescription digitizer",
     link: "https://github.com/Kaif-Imteyaz/Ink2Info",
@@ -138,7 +147,7 @@ const projectsData = [
     tech: "LLMs, RAG, Chain-of-Thought Reasoning, Agentic Workflows",
     year: "2025",
     description:
-      "Developed experimental chatbot revealing the reasoning process and step-by-step thought chain for transparency. Integrated OpenAI Reasoner with Tavily API for real-time web search and retrieval-augmented generation.",
+      "Engineered a retrieval-augmented generation pipeline that exposes its full step-by-step reasoning chain, integrating OpenAI Reasoner with Tavily API for real-time web retrieval. Designed end-to-end retrieval flow from query intake through document fetching, reranking signal generation, and response synthesis, with full transparency at each stage.",
     image: "public/detail-ui.png",
     alt: "De-Tail project",
     link: "https://github.com/Kaif-Imteyaz/De-Tail",
@@ -175,6 +184,7 @@ const heroContent = {
 };
 
 let expandedUpdates = false;
+let expandedProjects = false;
 
 // DOM Elements
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
@@ -187,7 +197,22 @@ const updatesList = document.getElementById("updatesList");
 const toggleUpdatesBtn = document.getElementById("toggleUpdatesBtn");
 const researchList = document.getElementById("researchList");
 const projectsList = document.getElementById("projectsList");
+const toggleProjectsBtn = document.getElementById("toggleProjectsBtn");
 const footerText = document.getElementById("footerText");
+
+document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+document.addEventListener("keydown", (e) => {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+    (e.ctrlKey && e.key.toLowerCase() === "u")
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+});
 
 // Initialize
 document.addEventListener("DOMContentLoaded", () => {
@@ -261,6 +286,17 @@ document.addEventListener("DOMContentLoaded", () => {
     expandedUpdates = !expandedUpdates;
     renderUpdates();
   });
+
+  const u = "kaifimteyaz.k";
+  const d = "gmail.com";
+  const el = document.getElementById("contactEmail");
+  el.href = "mailto:" + u + "@" + d;
+  el.textContent = u + "@" + d;
+
+  toggleProjectsBtn.addEventListener("click", () => {
+    expandedProjects = !expandedProjects;
+    renderProjects();
+  });
 });
 
 // Research Section
@@ -275,7 +311,7 @@ function renderResearch() {
         <div class="research-content">
           <h3 class="research-title">${research.title}</h3>
           <!-- <p class="research-authors">Author: ${research.authors}</p> -->
-          <p class="research-status">${research.status}</p>
+          <p class="project-meta">${research.status}</p>
           <p class="research-description">${research.description}</p>
         </div>
       </div>
@@ -286,7 +322,10 @@ function renderResearch() {
 
 // Projects Section
 function renderProjects() {
-  projectsList.innerHTML = projectsData
+  const visibleCount = expandedProjects ? projectsData.length : 4;
+  const visibleProjects = projectsData.slice(0, visibleCount);
+
+  projectsList.innerHTML = visibleProjects
     .map(
       (project) => `
       <div class="project-item">
@@ -296,13 +335,21 @@ function renderProjects() {
         <div class="project-content">
           <h3 class="project-title">${project.title}</h3>
           <p class="project-meta">${project.tech} | ${project.year}</p>
-          <a href="${project.link}" target="_blank"  rel="noopener noreferrer" class="project-link">${project.linkText}</a>
+          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link">${project.linkText}</a>
           <p class="project-description">${project.description}</p>
         </div>
       </div>
     `,
     )
     .join("");
+
+  const hasMoreItems = projectsData.length > 4;
+  if (!hasMoreItems) {
+    toggleProjectsBtn.style.display = "none";
+  } else {
+    toggleProjectsBtn.style.display = "inline-block";
+    toggleProjectsBtn.textContent = expandedProjects ? "See less" : "See more";
+  }
 }
 
 // Footer
