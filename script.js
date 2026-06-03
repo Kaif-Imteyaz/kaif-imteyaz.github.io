@@ -106,6 +106,17 @@ const researchData = [
     image: "public/spato-temp.png",
     alt: "PM2.5 spatiotemporal forecasting heatmap across India",
   },
+  {
+    title: "CATS: Culturally Adaptive Therapeutic System",
+    authors: "Md Kaif Imteyaz",
+    status: "Agentic AI | Final Undergraduate Project",
+    description:
+      "Designed an agentic AI system for physiotherapists that generates personalized exercise videos aligned with patients' cultural backgrounds, while providing real-time AI posture analysis, automated exercise monitoring, and intelligent voice coaching to support rehabilitation and treatment adherence.",
+    image: "public/cats-ui.png",
+    alt: "CATS physiotherapy system",
+    link: "https://github.com/Kaif-Imteyaz/CATS",
+    linkText: "Repository",
+  },
 ];
 
 const projectsData = [
@@ -118,17 +129,6 @@ const projectsData = [
     image: "public/ink2info.png",
     alt: "Ink2Info prescription digitizer",
     link: "https://github.com/Kaif-Imteyaz/Ink2Info",
-    linkText: "Repository",
-  },
-  {
-    title: "CATS: Culturally Adaptive Therapeutic System",
-    tech: "Agentic AI, Computer Vision (Pose Estimation), Edge AI (On-Device ML), Privacy-First Design",
-    year: "2025",
-    description:
-      "Designed an agentic AI system for physiotherapists that generates personalized exercise videos aligned with patients' cultural backgrounds, while providing real-time AI posture analysis, automated exercise monitoring, and intelligent voice coaching to support rehabilitation and treatment adherence.",
-    image: "public/cats-ui.png",
-    alt: "CATS physiotherapy system",
-    link: "https://github.com/Kaif-Imteyaz/CATS",
     linkText: "Repository",
   },
   {
@@ -313,6 +313,7 @@ function renderResearch() {
           <!-- <p class="research-authors">Author: ${research.authors}</p> -->
           <p class="project-meta">${research.status}</p>
           <p class="research-description">${research.description}</p>
+          ${research.link ? `<a href="${research.link}" target="_blank" rel="noopener noreferrer" class="project-link">${research.linkText}</a>` : ""}
         </div>
       </div>
     `,
