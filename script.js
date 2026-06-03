@@ -122,10 +122,10 @@ const projectsData = [
   },
   {
     title: "CATS: Culturally Adaptive Therapeutic System",
-    tech: "Computer Vision (Pose Estimation), Edge AI (On-Device ML), Privacy-First Design",
+    tech: "Agentic AI, Computer Vision (Pose Estimation), Edge AI (On-Device ML), Privacy-First Design",
     year: "2025",
     description:
-      "Built a privacy-first physiotherapy platform offering real-time AI posture analysis, automated exercise monitoring, and intelligent voice coaching, with all processing done locally.",
+      "Designed an agentic AI system for physiotherapists that generates personalized exercise videos aligned with patients' cultural backgrounds, while providing real-time AI posture analysis, automated exercise monitoring, and intelligent voice coaching to support rehabilitation and treatment adherence.",
     image: "public/cats-ui.png",
     alt: "CATS physiotherapy system",
     link: "https://github.com/Kaif-Imteyaz/CATS",
