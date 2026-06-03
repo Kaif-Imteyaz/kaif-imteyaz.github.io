@@ -88,21 +88,21 @@ const updates = [
 ];
 
 const researchData = [
-  // {
-  //   title: "Detecting Design Theater in Reasoning Models",
-  //   authors: "Md Kaif Imteyaz",
-  //   status: "LLM Benchmarking",
-  //   description:
-  //     "Developing a benchmark to measure authenticity gaps between generated reasoning traces and actual model behavior through systematic evaluation and interpretability analysis.",
-  //   image: "public/design.png",
-  //   alt: "Design Theater LLM benchmarking research",
-  // },
+  {
+    title: "Detecting Design Theater in Reasoning Models",
+    authors: "Md Kaif Imteyaz",
+    status: "LLM Benchmarking | Submitted to AIES 2026",
+    description:
+      "Developed a benchmark to measure authenticity gaps between generated reasoning traces and actual model behavior through systematic evaluation and interpretability analysis.",
+      image: "public/design.png",
+    alt: "Design Theater LLM benchmarking research",
+  },
   {
     title: "Episode-Aware PM2.5 Forecasting Across India",
     authors: "Md Kaif Imteyaz",
-    status: "Spatiotemporal Deep Learning",
+    status: "Spatiotemporal Deep Learning | Ongoing Research",
     description:
-      "Designing a spatiotemporal deep learning model for country-level PM2.5 forecasting over a 140×124 grid at 25 km resolution, predicting 16 future hours from a 10-hour lookback across 26 input channels with no future meteorological context.",
+      "Designed a spatiotemporal deep learning model for country-level PM2.5 forecasting over a 140×124 grid at 25 km resolution, predicting 16 future hours from a 10-hour lookback across 26 input channels with no future meteorological context.",
     image: "public/spato-temp.png",
     alt: "PM2.5 spatiotemporal forecasting heatmap across India",
   },
