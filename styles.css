@@ -687,6 +687,52 @@ body.dark-mode .project-description {
   color: var(--dark-text-secondary);
 }
 
+/* Custom Context Menu */
+#custom-context-menu {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  min-width: 160px;
+  overflow: hidden;
+}
+
+#custom-context-menu ul {
+  list-style: none;
+  padding: 4px 0;
+}
+
+#custom-context-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: background 0.15s;
+}
+
+#custom-context-menu li:hover {
+  background: var(--bg-secondary);
+  color: var(--accent-blue);
+}
+
+body.dark-mode #custom-context-menu {
+  background: var(--dark-bg-secondary);
+  border-color: #374151;
+}
+
+body.dark-mode #custom-context-menu li {
+  color: var(--dark-text-primary);
+}
+
+body.dark-mode #custom-context-menu li:hover {
+  background: var(--dark-bg-primary);
+  color: #60a5fa;
+}
+
 /* Footer */
 .footer {
   max-width: var(--max-width);
