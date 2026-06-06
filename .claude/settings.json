@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(grep -o 'custom-context-menu.\\\\{0,500\\\\}' \"c:/Users/kaifi/Desktop/Portfolio/kaif-imteyaz.github.io/script.min.js\")"
-    ]
-  }
-}
