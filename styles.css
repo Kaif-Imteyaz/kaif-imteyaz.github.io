@@ -554,7 +554,7 @@ body.dark-mode .toggle-btn:hover {
 .research-areas {
   font-size: 0.875rem;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin-bottom: 0.2rem;
 }
 
 .research-areas-label {
@@ -748,6 +748,7 @@ body.dark-mode .project-meta {
   color: var(--accent-blue);
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
+  margin-right: 5px;
   transition: color 0.2s ease;
 }
 
