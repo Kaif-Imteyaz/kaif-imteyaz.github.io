@@ -938,6 +938,7 @@ body.dark-mode .theme-toggle-btn .icon-moon { display: none; }
   width: 100%;
   height: 130px;
   overflow: hidden;
+  -webkit-user-select: none;
   user-select: none;
   border-radius: 6px;
   outline: none;
