@@ -53,6 +53,16 @@
                 >Resume</a
               >
             </nav>
+            <!-- Theme Toggle -->
+            <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark mode">
+              <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+              </svg>
+            </button>
             <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" aria-label="Open navigation menu">
               <span class="hamburger"></span>
@@ -134,7 +144,7 @@
               <a id="contactEmail" class="text-link"></a>.
             </p>
 
-            <p class="research-areas"><span class="research-areas-label">Research Interests</span> Healthcare AI, LLMs, Multimodal AI, RLHF, Continual Learning, AI for Social Impact, Deep Learning</p>
+            <p class="research-areas"><span class="research-areas-label">Research Interests</span>Healthcare AI, Video GenAI, Model Evaluation & Reproducibility, HCI</p>
 
             <div class="social-links">
               <a
@@ -155,13 +165,13 @@
                 class="social-link"
                 >Medium</a
               >
-              <!-- <a
+              <a
                 href="https://scholar.google.com/citations?user=kaifimteyaz"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="social-link"
                 >Scholar</a
-              > -->
+              >
             </div>
           </div>
 
@@ -178,8 +188,31 @@
       <!-- Updates Section -->
       <section id="updates" class="section">
         <h2 class="section-title">Updates</h2>
-        <div class="updates-list" id="updatesList"></div>
-        <button class="toggle-btn" id="toggleUpdatesBtn">See more</button>
+        <div id="catRunGame" class="cat-run" tabindex="0" role="button" aria-label="Walking cat updates">
+          <div class="cat-run-caption" id="catRunCaption"></div>
+          <div class="cat-run-ground"></div>
+          <div class="cat-run-cat" id="catRunCat"></div>
+          <div class="cat-run-milestones" id="catRunMilestones"></div>
+          <div class="cat-run-bubble" id="catRunBubble">want me to run more?</div>
+        </div>
+        <div class="timeline-hint-wrap">
+          <button id="showAllUpdatesBtn" class="link-btn" type="button">View timeline</button>
+          <span class="timeline-hint" id="timelineHint">Ginger's too slow? View timeline</span>
+        </div>
+        <div id="updatesTimeline" class="timeline" hidden>
+          <div class="timeline-spine">
+            <div class="timeline-track"></div>
+            <div class="timeline-dots" id="timelineDots"></div>
+            <div class="timeline-years" id="timelineYears"></div>
+          </div>
+          <div class="timeline-footer">
+            <p class="timeline-active" id="timelineActive"></p>
+            <div class="timeline-nav">
+              <button class="timeline-arrow" id="timelinePrev" aria-label="Previous update">&lsaquo;</button>
+              <button class="timeline-arrow" id="timelineNext" aria-label="Next update">&rsaquo;</button>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Research Section -->
@@ -227,7 +260,6 @@
       </button>
     </main>
 
-    <!-- <script src="oneko.js"></script> -->
     <script src="script.min.js"></script>
     <script>
       // Show update notification on page load
