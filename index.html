@@ -20,6 +20,22 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .update-popup {
+      position: fixed;
+      top: 70px;
+      right: 45px;
+      z-index: 1000;
+      padding: 10px 24px;
+      border-radius: 8px;
+      background: #424141;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  </style>
 </head>
 
 <body>
@@ -75,20 +91,7 @@
     </header>
 
     <!-- Update Notification Popup -->
-    <div id="updatePopup" style="
-          position: fixed;
-          top: 70px;
-          right: 45px;
-          background: #424141;
-          color: #ffffff;
-          padding: 10px 24px;
-          border-radius: 8px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          z-index: 1000;
-          font-size: 14px;
-          opacity: 0;
-          transition: opacity 0.3s ease;
-        ">
+    <div id="updatePopup" class="update-popup">
       <i>Last Updated: August 16, 2026</i>
     </div>
 

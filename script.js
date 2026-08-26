@@ -241,9 +241,6 @@ function showWalkCaption(update) {
   catRunCaption.innerHTML = `<span class="update-date">${update.date}</span>${update.text}`;
   catRunCaption.classList.add("visible");
   clearTimeout(walkState.captionTimer);
-  walkState.captionTimer = setTimeout(() => {
-    catRunCaption.classList.remove("visible");
-  }, CAPTION_MS);
 }
 
 let catBubbleAutoHideTimer = null;
@@ -268,9 +265,7 @@ function showTimelineHintOnPause() {
 }
 
 function onCatRest() {
-  // Hide the caption text whenever cat stops walking
-  clearTimeout(walkState.captionTimer);
-  catRunCaption.classList.remove("visible");
+  // Keep the last update caption visible; it clears when the next milestone triggers
   showTimelineHintOnPause();
 }
 
@@ -283,6 +278,8 @@ function pauseByClick() {
   s.paused = true;
   s.sleeping = false;
   clearTimeout(s.sleepTimer);
+  clearTimeout(s.captionTimer);
+  catRunCaption.classList.remove("visible");
   setCatSprite(CAT_TIRED);
   catRunCat.style.transform = "translateY(0px)";
   showCatBubble("sigh, thanks! tap me to keep going");
