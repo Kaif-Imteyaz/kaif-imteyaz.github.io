@@ -835,11 +835,13 @@ function initScrollTop() {
 (function initContextMenu() {
   const menu = document.createElement("div");
   menu.id = "custom-context-menu";
-  menu.innerHTML = "<ul><li id='ctx-new-tab'>Open in new tab</li><li id='ctx-copy-link'>Copy link</li><li id='ctx-copy-text'>Copy</li></ul>";
+  menu.innerHTML = "<ul><li id='ctx-new-tab'>Open in new tab</li><li id='ctx-open-mail'>Open in mail app</li><li id='ctx-copy-link'>Copy link</li><li id='ctx-copy-email'>Copy email</li><li id='ctx-copy-text'>Copy</li></ul>";
   document.body.appendChild(menu);
 
   const newTabItem = document.getElementById("ctx-new-tab");
+  const openMailItem = document.getElementById("ctx-open-mail");
   const copyLinkItem = document.getElementById("ctx-copy-link");
+  const copyEmailItem = document.getElementById("ctx-copy-email");
   const copyTextItem = document.getElementById("ctx-copy-text");
 
   let currentLink = null;
@@ -858,8 +860,11 @@ function initScrollTop() {
       return;
     }
     currentLink = linkEl || null;
-    newTabItem.style.display = linkEl ? "" : "none";
-    copyLinkItem.style.display = linkEl ? "" : "none";
+    const isEmail = linkEl && (linkEl.href.toLowerCase().startsWith("mailto:") || !!linkEl.dataset.addr);
+    newTabItem.style.display = linkEl && !isEmail ? "" : "none";
+    copyLinkItem.style.display = linkEl && !isEmail ? "" : "none";
+    openMailItem.style.display = isEmail ? "" : "none";
+    copyEmailItem.style.display = isEmail ? "" : "none";
     copyTextItem.style.display = !linkEl && text ? "" : "none";
     menu.style.display = "block";
     const menuW = menu.offsetWidth || 160;
@@ -870,16 +875,54 @@ function initScrollTop() {
     menu.style.top = y + "px";
   });
 
+  const toast = (msg) => {
+    if (typeof window.__showToast === "function") window.__showToast(msg);
+  };
+
   newTabItem.addEventListener("click", () => {
-    if (currentLink) window.open(currentLink.href, "_blank", "noopener,noreferrer");
+    if (currentLink) {
+      window.open(currentLink.href, "_blank", "noopener,noreferrer");
+      toast("Opened in new tab");
+    }
     menu.style.display = "none";
   });
   copyLinkItem.addEventListener("click", () => {
-    if (currentLink) navigator.clipboard.writeText(currentLink.href);
+    if (currentLink) {
+      navigator.clipboard.writeText(currentLink.href);
+      toast("Link copied");
+    }
     menu.style.display = "none";
   });
   copyTextItem.addEventListener("click", () => {
-    if (selectedText) navigator.clipboard.writeText(selectedText);
+    if (selectedText) {
+      navigator.clipboard.writeText(selectedText);
+      toast("Text copied");
+    }
+    menu.style.display = "none";
+  });
+  openMailItem.addEventListener("click", () => {
+    if (currentLink) {
+      const addr = currentLink.dataset.addr || currentLink.href.replace(/^mailto:/i, "");
+      const gmail = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(addr);
+      const iframe = document.createElement("iframe");
+      iframe.style.display = "none";
+      iframe.src = "mailto:" + addr;
+      document.body.appendChild(iframe);
+      setTimeout(() => {
+        iframe.remove();
+        if (!document.hidden) {
+          window.open(gmail, "_blank", "noopener,noreferrer");
+        }
+      }, 1000);
+    }
+    menu.style.display = "none";
+  });
+  copyEmailItem.addEventListener("click", () => {
+    if (currentLink) {
+      const addr = currentLink.dataset.addr || currentLink.href.replace(/^mailto:/i, "");
+      navigator.clipboard.writeText(addr);
+      toast("Email copied");
+    }
     menu.style.display = "none";
   });
 
@@ -921,6 +964,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailUser = "kaifimteyaz.k";
   const emailDomain = "gmail.com";
   const contactEmail = document.getElementById("contactEmail");
-  contactEmail.href = "mailto:" + emailUser + "@" + emailDomain;
-  contactEmail.textContent = emailUser + "@" + emailDomain;
+  const emailAddr = emailUser + "@" + emailDomain;
+  contactEmail.href = "mailto:" + emailAddr;
+  contactEmail.textContent = emailAddr;
+  contactEmail.addEventListener("click", () => {
+    if (navigator.clipboard) navigator.clipboard.writeText(emailAddr).catch(() => {});
+  });
 });
