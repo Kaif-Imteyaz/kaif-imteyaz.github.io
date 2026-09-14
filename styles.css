@@ -20,15 +20,15 @@
   --warning: #e8a33d;
   --error: #d64545;
 
-  --dark-bg-primary: #141018;
-  --dark-bg-secondary: #1e1826;
-  --dark-text-primary: #ece7f0;
-  --dark-text-secondary: #ece7f0;
-  --dark-text-light: #a094ad;
-  --dark-border-color: #332a3d;
-  --dark-accent: #c084fc;
-  --dark-accent-hover: #d8b4fe;
-  --dark-accent-light: #2a1f3d;
+  --dark-bg-primary: #0f0f0f;
+  --dark-bg-secondary: #1a1a1a;
+  --dark-text-primary: #f5f0e1;
+  --dark-text-secondary: #f5f0e1;
+  --dark-text-light: #a39d8e;
+  --dark-border-color: #2c2c2c;
+  --dark-accent: #3b73d1;
+  --dark-accent-hover: #295aad;
+  --dark-accent-light: #3a2f0a;
   --dark-success: #4caf62;
   --dark-warning: #f0b458;
   --dark-error: #e56b6b;
