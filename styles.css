@@ -6,8 +6,7 @@
 }
 
 :root {
-  /* Claude Design — Daylight (warm cream) */
-  --bg-primary: #f4ecdc;
+  --bg-primary: #faf9f7;
   --bg-secondary: #ede4d0;
   --bg-dark: #1f1e1d;
   --text-primary: #1a1a17;
@@ -16,21 +15,43 @@
   --border-color: #e2d7bd;
   --accent-blue: #3b73d1;
   --accent-blue-hover: #295aad;
+  --accent-blue-light: #eaf1fb;
+  --success: #2f9e44;
+  --warning: #e8a33d;
+  --error: #d64545;
 
-  /* Claude Design — Nocturnal (warm charcoal) */
-  --dark-bg-primary: #262624;
-  --dark-bg-secondary: #1f1e1d;
-  --dark-text-primary: #f5f4ee;
-  --dark-text-secondary: #c9c5b6;
-  --dark-border-color: #3a3937;
-  --dark-accent: #6ba4ff;
-  --dark-accent-hover: #8fbcff;
+  --dark-bg-primary: #141018;
+  --dark-bg-secondary: #1e1826;
+  --dark-text-primary: #ece7f0;
+  --dark-text-secondary: #ece7f0;
+  --dark-text-light: #a094ad;
+  --dark-border-color: #332a3d;
+  --dark-accent: #c084fc;
+  --dark-accent-hover: #d8b4fe;
+  --dark-accent-light: #2a1f3d;
+  --dark-success: #4caf62;
+  --dark-warning: #f0b458;
+  --dark-error: #e56b6b;
 
-  /* Fixed CSS comment syntax from HTML to CSS */
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-serif: "Merriweather", Georgia, serif;
+  --font-mono: "JetBrains Mono", "SF Mono", monospace;
+
   --max-width: 64rem;
   --spacing-unit: 1rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 4rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 html,
@@ -410,6 +431,11 @@ body.dark-mode .hero {
 .hero-description {
   color: var(--text-secondary);
   line-height: 1.625;
+}
+
+.hero-description a {
+  text-decoration: underline;
+  color: inherit;
 }
 
 body.dark-mode .hero-description {
@@ -1382,4 +1408,35 @@ body.dark-mode .timeline-arrow:hover:not(:disabled) {
   .cat-run-milestone { bottom: 26px; }
   .timeline-footer { flex-direction: column; }
   .timeline-nav { align-self: flex-end; }
+}
+
+.email-menu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  background: var(--bg-card, #1e1e1e);
+  border: 1px solid var(--border, #333);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  z-index: 9999;
+}
+.email-menu.open { display: flex; }
+.email-menu button {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 10px 14px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+.email-menu button:hover { background: rgba(127, 127, 127, 0.15); }
+.email-menu-addr {
+  padding: 10px 14px;
+  font-size: 13px;
+  opacity: 0.7;
+  border-bottom: 1px solid var(--border, #333);
+  user-select: all;
 }

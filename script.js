@@ -961,13 +961,28 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProjects();
   });
 
-  const emailUser = "kaifimteyaz.k";
-  const emailDomain = "gmail.com";
   const contactEmail = document.getElementById("contactEmail");
-  const emailAddr = emailUser + "@" + emailDomain;
+  const emailAddr = "kaifimteyaz.k" + "@" + "gmail.com";
+  contactEmail.textContent = "Email";
   contactEmail.href = "mailto:" + emailAddr;
-  contactEmail.textContent = emailAddr;
-  contactEmail.addEventListener("click", () => {
-    if (navigator.clipboard) navigator.clipboard.writeText(emailAddr).catch(() => {});
+  contactEmail.title = emailAddr;
+
+  contactEmail.addEventListener("click", (e) => {
+    e.preventDefault();
+    const gmail =
+      "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(emailAddr);
+    const start = Date.now();
+    const onBlur = () => {
+      cleanup();
+    };
+    const cleanup = () => window.removeEventListener("blur", onBlur);
+    window.addEventListener("blur", onBlur);
+    window.location.href = "mailto:" + emailAddr;
+    setTimeout(() => {
+      cleanup();
+      if (Date.now() - start < 1500 && document.hasFocus()) {
+        window.open(gmail, "_blank", "noopener,noreferrer");
+      }
+    }, 800);
   });
 });
