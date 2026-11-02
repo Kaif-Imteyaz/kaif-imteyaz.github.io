@@ -34,7 +34,7 @@
     NW: [[-1,  0], [-1, -1]],
   };
 
-  const nekoSpeed = 10;
+  const nekoSpeed = 14;
   const IDLE_THRESHOLD = 50; // 50 × 100ms = 5s
 
   let nekoEl = null;

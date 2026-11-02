@@ -174,9 +174,9 @@ const CAT_TIRED = [-96, -64];
 const CAT_ALERT = [-224, -96];
 // Cat walks slowly: each milestone (dot-to-dot) takes ~5.5s to cover
 const MILESTONE_SPACING = 200; // px between adjacent milestones
-const MILESTONE_TIME_SEC = 5.5;
+const MILESTONE_TIME_SEC = 1.5;
 const WALK_SPEED = MILESTONE_SPACING / (MILESTONE_TIME_SEC * 60); // ~0.61 px/frame
-const WALK_FRAME_INTERVAL = 30;
+const WALK_FRAME_INTERVAL = 10;
 const SLEEP_FRAME_INTERVAL = 60;
 const CAT_TRIGGER_X = 24 + 24;
 const CAT_CENTER_X = 24 + 16;
@@ -549,7 +549,7 @@ function initWalkingCat() {
   // Intro: hold cat still, show greeting bubble, then start walking
   walkState.paused = true;
   setCatSprite(WALK_FRAMES[0]);
-  showCatBubble("hi! i'm ginger come, i'll show you around");
+  showCatBubble("Hi! I'm ginger");
   const startWalking = () => {
     if (!walkState.paused) return;
     walkState.paused = false;
